@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+ xmlns:blogChannel="http://backend.userland.com/blogChannelModule"
+>
+
+<channel>
+<title>Chemicum</title>
+<link>http://www.hyyravintolat.fi</link>
+<description>Ruokalista / vikko 2</description>
+
+<item>
+<title>Maanantaina 07.01.2019</title>
+<description>Maukkaasti: Paistettuja muikkuja, tartarkastiketta. Allergeenit: VL, [S], maitoa, kalaa, gluteenia, Vastuullisesti kalastettua. Edullisesti: Uunimakkaraa, tartarkastiketta. Allergeenit: G, L, kanamunaa, maitoa, sinapinsiemeni&#xE4;, sinappia, valkosipulia. Edullisesti: Kanawokkia. Allergeenit: G, L, M, [S], palkokasveja, soijaa, valkosipulia. Edullisesti: Punajuuripy&#xF6;ryk&#xE4;t, soijajogurttikastiketta. Allergeenit: VE, [S], G, soijaa, siemeni&#xE4;, palkokasveja. Edullisesti: Vebab-kukkakaalisalaatti. Allergeenit: [S], VE, gluteenia, palkokasveja, soijaa. Makeasti: Mansikkarahkaa. Allergeenit: L, K, G, maitoa. Lis&#xE4;ke: Perunasosetta. Allergeenit: Pyyd&#xE4; Ve, L, K, G, maitoa. </description>
+<guid isPermaLink="false">http://www.hyyravintolat.fi/#/10/0</guid>
+</item>
+<item>
+<title>Tiistaina 08.01.2019</title>
+<description>Maukkaasti: Seesamkananfileet&#xE4;, chilikastiketta. Allergeenit: G, M, [S], seesaminsiemeni&#xE4;, soijaa, valkosipulia. Edullisesti: Pippurinen h&#xE4;rk&#xE4;pata. Allergeenit: G, L, [S], maitoa. Edullisesti: Kalapalat, persiljadippi&#xE4;. Allergeenit: L, gluteenia, kalaa, maitoa, Vastuullisesti kalastettua. Edullisesti: Kikhernekastiketta Tikka masala. Allergeenit: VE, [S], G, palkokasveja, soijaa, valkosipulia, Ilmastovalinta. Edullisesti: Kana-Caesarsalaattia. Allergeenit: [S], VL, gluteenia, kalaa, kanamunaa, maitoa, valkosipulia. Makeasti: Omena-kanelikiisseli&#xE4;. Allergeenit: G, K, L, maitoa. </description>
+<guid isPermaLink="false">http://www.hyyravintolat.fi/#/10/1</guid>
+</item>
+<item>
+<title>Keskiviikkona 09.01.2019</title>
+<description>Maukkaasti: Porsaanposkea sinappikastikkeessa. Allergeenit: G, L, M, sinappia. Edullisesti: Tandoorikanankoipi ja kurkkuraitaa. Allergeenit: L, G, maitoa, p&#xE4;hkin&#xE4;&#xE4;, palkokasveja, siemeni&#xE4;, sinappia, valkosipulia. Edullisesti: Tofu-p&#xE4;hkin&#xE4;kastiketta. Allergeenit: VE, [S], G, soijaa, p&#xE4;hkin&#xE4;&#xE4;, maap&#xE4;hkin&#xE4;&#xE4;, Sis&#xE4;lt&#xE4;&#xE4; Reilun kaupan tuotteita, Sis&#xE4;lt&#xE4;&#xE4; luomua, Ilmastovalinta. Edullisesti: Siikapihvit, pinaattikermaviili&#xE4;. Allergeenit: G, L, [S], kalaa, maitoa, soijaa, valkosipulia. Edullisesti: Kylm&#xE4;savulohisalaattia. Allergeenit: G, M, [S], kalaa, kanamunaa, Vastuullisesti kalastettua. Makeasti: Karamellihedelm&#xE4;t, kermavaahtoa. Allergeenit: G, L. </description>
+<guid isPermaLink="false">http://www.hyyravintolat.fi/#/10/2</guid>
+</item>
+<item>
+<title>Torstaina 10.01.2019</title>
+<description>Edullisesti: BBQ-kanakastiketta. Allergeenit: G, L, M, [S], SO, V, sinappia, soijaa, valkosipulia. Edullisesti: Kasvis-papukroketit, ruohosipulidippi&#xE4;. Allergeenit: G, K, L, Pyyd&#xE4; Ve, maitoa, palkokasveja, siemeni&#xE4;, soijaa, valkosipulia. Edullisesti: Hernekeittoa luomuherneest&#xE4; ja pannukakkua. Allergeenit: L, [S], gluteenia, kanamunaa, maitoa, palkokasveja, sinapinsiemeni&#xE4;, sinappia, valkosipulia, Sis&#xE4;lt&#xE4;&#xE4; luomua. Edullisesti: Kasvishernekeittoa luomuherneest&#xE4; ja pannukakkua. Allergeenit: VE, [S], K, valkosipulia, soijaa, sinappia, sinapinsiemeni&#xE4;, palkokasveja, Sis&#xE4;lt&#xE4;&#xE4; luomua. Edullisesti: Vuohenjuusto-pestosalaattia. Allergeenit: G, K, VL, maitoa, siemeni&#xE4;, valkosipulia. Makeasti: Pannukakkua ja hilloa. Allergeenit: K, Pyyd&#xE4; Ve, pyydett&#xE4;ess&#xE4; G, gluteenia, kanamunaa, maitoa. </description>
+<guid isPermaLink="false">http://www.hyyravintolat.fi/#/10/3</guid>
+</item>
+<item>
+<title>Perjantaina 11.01.2019</title>
+<description>Maukkaasti: Porsaan lehtipihvi, Bearnaisekastiketta. Allergeenit: gluteenia, kanamunaa, maitoa, soijaa. Edullisesti: Jauhelihabolognaisea, juustoraastetta. Allergeenit: G, L, [S], maitoa, valkosipulia. Edullisesti: Soijabolognaisea. Allergeenit: G, K, L, M, [S], VE, soijaa, Ilmastovalinta, Sis&#xE4;lt&#xE4;&#xE4; luomua. Edullisesti: Lime-persiljakalaa, sitruunadippi. Allergeenit: L, gluteenia, kalaa, kanamunaa, maitoa, sinapinsiemeni&#xE4;, Vastuullisesti kalastettua. Edullisesti: Meksikolaista nyht&#xF6;kaurasalaattia. Allergeenit: [S], VE, gluteenia, palkokasveja, sinappia, valkosipulia. Makeasti: Matcha panna cotta. Allergeenit: G, L, maitoa. </description>
+<guid isPermaLink="false">http://www.hyyravintolat.fi/#/10/4</guid>
+</item>
+<item>
+<title>Lauantaina 12.01.2019</title>
+<description></description>
+<guid isPermaLink="false">http://www.hyyravintolat.fi/#/10/5</guid>
+</item>
+<item>
+<title>Sunnuntaina 13.01.2019</title>
+<description></description>
+<guid isPermaLink="false">http://www.hyyravintolat.fi/#/10/6</guid>
+</item>
+</channel>
+</rss>
