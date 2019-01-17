@@ -33,7 +33,6 @@ export default class PdfScreen extends React.Component {
                     backgroundColor="#FF60A5"
                     barStyle="dark-content"
                 />
-
                 <Pdf
                     source={source}
                     onLoadComplete={(numberOfPages, filePath) => {

@@ -1,7 +1,6 @@
-import React, { Fragment, Component } from 'react';
-import PropTypes from 'prop-types';
-import { Text, Button, View, Linking, TouchableOpacity, Image, WebView, Dimensions, ActivityIndicator } from 'react-native';
-import { Icon, SocialIcon } from 'react-native-elements'
+import React, { Component } from 'react';
+import { Text, View, Linking, TouchableOpacity, Image, WebView, ActivityIndicator } from 'react-native';
+import { Icon } from 'react-native-elements'
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import {
     createSwitchNavigator,
@@ -10,22 +9,6 @@ import {
 } from 'react-navigation';
 import styles from './../Styles/index'
 import firebase from 'react-native-firebase';
-
-/*
-class SocialButton extends Component {
-    static propTypes = {
-        url: PropTypes.string.isRequired,
-        type: PropTypes.string.isRequired,
-    };
-
-    handleClick = () => {
-        Linking.openURL(this.props.url).catch(err => console.error("An error occurred", err));
-    };
-
-    render() {
-        return <SocialIcon type={this.props.type} url={this.props.url} onPress={this.handleClick} />;
-    }
-}*/
 
 class SongArchive extends Component {
     constructor() {
@@ -89,10 +72,6 @@ const Some = ({ navigation }) => (
         <Text style={styles.onlinetext}>
             Spektrum finns på sociala medier och har sin egen sida samt tidning på nätet.
           </Text>
-        {/*
-        <SocialButton type="facebook" url="https://www.facebook.com/groups/5459743428/" />
-        <SocialButton type="instagram" url="https://www.instagram.com/spektrumrf/" />
-        */}
 
         <TouchableOpacity
             activeOpacity={0.8}
@@ -134,9 +113,7 @@ const About = ({ navigation }) => (
 
 const Extra = ({ navigation }) => (
     <View style={{ flex: 1, flexDirection: 'column' }}>
-
         <SongArchive />
-
     </View>
 );
 
@@ -183,7 +160,6 @@ const DrawerComponent = createDrawerNavigator(
         }
     }
 );
-
 
 const AppStack = createStackNavigator({
     Drawer: { screen: DrawerComponent },

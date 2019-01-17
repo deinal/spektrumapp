@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, Dimensions, StatusBar } from 'react-native';
+import { Text, View, Image, StatusBar } from 'react-native';
 import { Icon } from 'react-native-elements'
 import styles from './../Styles/index';
 

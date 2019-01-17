@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Image, StatusBar, WebView, FlatList, ActivityIndicator } from 'react-native';
-import styles from './../Styles/index';
+import { View, FlatList, ActivityIndicator } from 'react-native';
 import firebase from 'react-native-firebase';
 import NewsItem from './newsitem';
 
