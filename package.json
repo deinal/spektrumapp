@@ -31,9 +31,10 @@
     "react-native-gesture-handler": "^1.0.12",
     "react-native-ionicons": "^4.5.0",
     "react-native-pdf": "^5.0.11",
-    "react-native-vector-icons": "^6.1.0",
+    "react-native-vector-icons": "^6.2.0",
     "react-native-xml2js": "^1.0.3",
     "react-navigation": "^3.0.9",
+    "react-web-vector-icons": "^1.0.0",
     "rn-fetch-blob": "^0.10.15",
     "yarn": "^1.12.3"
   }

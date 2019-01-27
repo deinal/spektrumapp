@@ -36,7 +36,7 @@ class SongArchive extends Component {
                     <ActivityIndicator color="#FF60A5" />
                 </View>
             )
-        } 
+        }
         return <WebView source={{ uri: this.state.sangarkiv }} />;
     }
 }
@@ -108,11 +108,36 @@ const Some = ({ navigation }) => (
 );
 
 const About = ({ navigation }) => (
-    <Text>©Daniel Holmberg 2019</Text>
+    <View style={{ flex: 1, paddingTop: 10, backgroundColor: '#fbfcfb' }}>
+        <Text style={{ color: 'black', margin: 5 }}>
+            Written in React-Native, database powered by Firebase. {"\n"}{"\n"}
+            The image on the info screen can be changed on the database at any time, so if you've got some suitable pic hanging around plz send. {"\n"}{"\n"}
+            Application source code can be found on Github, please also report to me about bugs. {"\n"}{"\n"}
+            Link to repo below as well as to the Google Play developer profile. Version: 1.0 ©Daniel Holmberg 2019 
+          </Text>
+    
+    <View style={styles.somecontainer}>
+        <TouchableOpacity
+            activeOpacity={0.8}
+            style={styles.facebookbutton}
+            onPress={() => { Linking.openURL('https://github.com/flansec/spektrumapp') }}
+        >
+            <Ionicon name="logo-github" size={34} color="#000" />
+        </TouchableOpacity>
+
+        <TouchableOpacity
+            activeOpacity={0.8}
+            style={styles.facebookbutton}
+            onPress={() => { Linking.openURL('https://play.google.com/store/apps/developer?id=flansec') }}
+        >
+            <Ionicon name="md-appstore" size={34} color="#000" />
+        </TouchableOpacity>
+    </View>
+    </View>
 );
 
 const Extra = ({ navigation }) => (
-    <View style={{ flex: 1, flexDirection: 'column' }}>
+    <View style={{ flex: 1, flexDirection: 'column', backgroundColor: '#fbfcfb' }}>
         <SongArchive />
     </View>
 );

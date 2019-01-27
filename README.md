@@ -13,8 +13,13 @@ Written with React Native and using Firebase as a database.
 - Lunch screen where uni's lunch menu is displayed.
 - Info screen with a drawer navigator. Links to social media, homepage etc as well as an image from the database can be found here. The other pages in the drawer is a song archive and an about page.
 
-Used the underlying structure and followed tips of the Firebase Starter kit:
-`https://github.com/invertase/react-native-firebase-starter.git`
+---
+
+I've only tested the app on my own device so if you notice any bugs feel free to contact me.
+
+---
+
+Used the underlying structure and followed tips of the Firebase Starter kit: ['react-native-firebase-starter'](https://github.com/invertase/react-native-firebase-starter.git)
 
 ### React Native Firebase Starter<a href="https://invertase.io/oss/react-native-firebase"><img align="left" src="https://i.imgur.com/JIyBtKW.png" width="180px"></a>
 
