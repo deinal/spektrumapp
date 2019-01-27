@@ -112,7 +112,7 @@ android {
     applicationId "com.flansec.spektrumapp"
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
-    versionCode 1
+    versionCode 2
     versionName "1.0"
     ndk {
       abiFilters "armeabi-v7a", "x86"
