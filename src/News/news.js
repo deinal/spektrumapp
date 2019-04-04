@@ -42,8 +42,6 @@ export default class NewsScreen extends React.Component {
     });
   }
 
-
-
   render() {
     if (this.state.loading) {
       return (

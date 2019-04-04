@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, StatusBar } from 'react-native';
+import { Text, View, Image, StatusBar, Button } from 'react-native';
 import { Icon } from 'react-native-elements'
 import styles from './../Styles/index';
 
@@ -23,13 +23,20 @@ export default class HomeScreen extends React.Component {
                     Spektrum rf är en svensk­språkig ämnesförening vid Helsingfors universitets matematisk-naturvetenskapliga fakultet.
           </Text>
                 <View style={styles.bottom}>
+                    <Button
+                        onPress={() => navigate('Pdf')}
+                        title="Sångboken"
+                        color="#FF60A5"
+                    />
+                </View>
+                {/* <View style={styles.bottom}>
                     <Icon
                         name='keyboard-arrow-down'
                         color='black'
                         size={32}
                         onPress={() => navigate('Pdf')}
                     />
-                </View>
+                </View> */}
             </View>
         );
     }
