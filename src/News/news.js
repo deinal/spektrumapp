@@ -1,44 +1,24 @@
 import React from 'react';
-import { View, FlatList, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator, WebView } from 'react-native';
 import firebase from 'react-native-firebase';
-import NewsItem from './newsitem';
 
-export default class NewsScreen extends React.Component {
+export default class ArchiveScreen extends React.Component {
 
   constructor() {
     super();
-    this.ref = firebase.firestore().collection('news');
-    this.unsubscribe = null;
 
     this.state = {
       textInput: '',
       loading: true,
-      news: [],
+      sangarkiv: '',
     };
   };
 
-  componentDidMount() {
-    this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
-  }
-
-  componentWillUnmount() {
-    this.unsubscribe();
-  }
-
-  onCollectionUpdate = (querySnapshot) => {
-    const news = [];
-    querySnapshot.forEach((doc) => {
-      const { title, content } = doc.data();
-      news.push({
-        key: doc.id,
-        doc, // DocumentSnapshot
-        title,
-        content,
-      });
-    });
+  async componentDidMount() {
+    const doc = await firebase.firestore().collection('config').doc('sangarkiv').get()
+    this.setState({ loading: false });
     this.setState({
-      news,
-      loading: false,
+      sangarkiv: doc.data().ArkivURL,
     });
   }
 
@@ -50,13 +30,6 @@ export default class NewsScreen extends React.Component {
         </View>
       )
     }
-    return (
-      <View style={{ flex: 1 }}>
-        <FlatList
-          data={this.state.news}
-          renderItem={({ item }) => <NewsItem {...item} />}
-        />
-      </View>
-    );
+    return <WebView source={{ uri: this.state.sangarkiv }} />;
   }
 }

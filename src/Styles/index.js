@@ -48,7 +48,7 @@ export default StyleSheet.create({
   bottom: {
     flex: 1,
     justifyContent: 'flex-end',
-    marginBottom: 12
+    marginBottom: 14
   },
   header: {
     flex: 1,

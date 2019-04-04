@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Linking, TouchableOpacity, Image, WebView, ActivityIndicator } from 'react-native';
+import { Text, View, Linking, TouchableOpacity, Image, ActivityIndicator, FlatList } from 'react-native';
 import { Icon } from 'react-native-elements'
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import {
@@ -9,59 +9,87 @@ import {
 } from 'react-navigation';
 import styles from './../Styles/index'
 import firebase from 'react-native-firebase';
+import NewsItem from './newsitem';
 
-class SongArchive extends Component {
+class NewsScreen extends Component {
     constructor() {
-        super();
+    super();
+    this.ref = firebase.firestore().collection('news');
+    this.unsubscribe = null;
 
-        this.state = {
-            textInput: '',
-            loading: true,
-            sangarkiv: '',
-        };
+    this.state = {
+      textInput: '',
+      loading: true,
+      news: [],
     };
+  };
 
-    async componentDidMount() {
-        const doc = await firebase.firestore().collection('config').doc('sangarkiv').get()
-        this.setState({ loading: false });
-        this.setState({
-            sangarkiv: doc.data().ArkivURL,
-        });
-    }
+  componentDidMount() {
+    this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
+  }
 
-    render() {
-        if (this.state.loading) {
-            return (
-                <View style={{ flex: 1, padding: 20 }}>
-                    <ActivityIndicator color="#FF60A5" />
-                </View>
-            )
-        }
-        return <WebView source={{ uri: this.state.sangarkiv }} />;
+  componentWillUnmount() {
+    this.unsubscribe();
+  }
+
+  onCollectionUpdate = (querySnapshot) => {
+    const news = [];
+    querySnapshot.forEach((doc) => {
+      const { title, content } = doc.data();
+      news.push({
+        key: doc.id,
+        doc, // DocumentSnapshot
+        title,
+        content,
+      });
+    });
+    this.setState({
+      news,
+      loading: false,
+    });
+  }
+
+  render() {
+    if (this.state.loading) {
+      return (
+        <View style={{ flex: 1, padding: 20 }}>
+          <ActivityIndicator color="#FF60A5" />
+        </View>
+      )
     }
+    return (
+      <View style={{ flex: 1 }}>
+        <FlatList
+          data={this.state.news}
+          renderItem={({ item }) => <NewsItem {...item} />}
+        />
+      </View>
+    );
+  }
 }
 
 class OnlineImage extends Component {
-    constructor() {
-        super();
+    // constructor() {
+    //     super();
 
-        this.state = {
-            textInput: '',
-            loading: true,
-            onlineimage: '',
-        };
-    };
+    //     this.state = {
+    //         textInput: '',
+    //         loading: true,
+    //         onlineimage: '',
+    //     };
+    // };
 
-    async componentDidMount() {
-        const doc = await firebase.firestore().collection('config').doc('onlineimage').get()
-        this.setState({ loading: false });
-        this.setState({
-            onlineimage: doc.data().ImageURL,
-        });
-    }
+    // async componentDidMount() {
+    //     const doc = await firebase.firestore().collection('config').doc('onlineimage').get()
+    //     this.setState({ loading: false });
+    //     this.setState({
+    //         onlineimage: doc.data().ImageURL,
+    //     });
+    // }
 
     render() {
-        return <Image style={{ width: 450, height: 250 }} source={{ uri: this.state.onlineimage }} />;
+        // return <Image style={{ width: 450, height: 250 }} source={{ uri: this.state.onlineimage }} />;
+        return <Image style={{ width: 450, height: 250 }} source={ require('./../../assets/spektractum-s.jpg') } />;
     }
 }
 
@@ -111,9 +139,8 @@ const About = ({ navigation }) => (
     <View style={{ flex: 1, paddingTop: 10, backgroundColor: '#fbfcfb' }}>
         <Text style={{ color: 'black', margin: 5 }}>
             Written in React-Native, database powered by Firebase. {"\n"}{"\n"}
-            The image on the info screen can be changed on the database at any time, so if you've got some suitable pic hanging around plz send. {"\n"}{"\n"}
             Application source code can be found on Github, please also report to me about bugs. {"\n"}{"\n"}
-            Link to repo below as well as to the Google Play developer profile. Version: 1.0 ©Daniel Holmberg 2019 
+            Link to repo below as well as to the Google Play developer profile. Version: 1.1 ©Daniel Holmberg 2019 
           </Text>
     
     <View style={styles.somecontainer}>
@@ -138,7 +165,7 @@ const About = ({ navigation }) => (
 
 const Extra = ({ navigation }) => (
     <View style={{ flex: 1, flexDirection: 'column', backgroundColor: '#fbfcfb' }}>
-        <SongArchive />
+        <NewsScreen />
     </View>
 );
 
@@ -172,8 +199,8 @@ const ExtraStack = createStackNavigator({
 const DrawerComponent = createDrawerNavigator(
     {
         Online: SomeStack,
-        Sångarkiv: ExtraStack,
-        About: AboutStack
+        Dikthörna: ExtraStack,
+        Om: AboutStack
 
     }, {
         drawerPosition: 'right',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import styles from './../Styles/index'
+import styles from '../Styles/index'
 
 export default class Todo extends React.PureComponent {
     render() {

@@ -2,7 +2,7 @@ import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import HomeScreen from './src/Home/index';
-import NewsScreen from './src/News/news';
+import ArchiveScreen from './src/News/news';
 import LunchScreen from './src/Lunch/lunch';
 import InfoScreen from './src/Info/index';
 
@@ -10,9 +10,9 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
   const { routeName } = navigation.state;
   let IconComponent = Ionicons;
   let iconName;
-  if (routeName === 'Home') {
+  if (routeName === 'Hem') {
     iconName = `md-home`;
-  } else if (routeName === 'News') {
+  } else if (routeName === 'Arkiv') {
     iconName = `md-paper`;
   } else if (routeName === 'Lunch') {
     iconName = `md-pizza`;
@@ -26,8 +26,8 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
 export default createAppContainer(
   createBottomTabNavigator(
     {
-      Home: { screen: HomeScreen },
-      News: { screen: NewsScreen},
+      Hem: { screen: HomeScreen },
+      Arkiv: { screen: ArchiveScreen},
       Lunch: { screen: LunchScreen},
       Info: { screen: InfoScreen },
     },
