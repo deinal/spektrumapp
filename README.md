@@ -6,6 +6,10 @@ Written with React Native and using Firebase as a database.
 
 ---
 
+https://play.google.com/store/apps/details?id=com.flansec.spektrumapp
+
+---
+
 #### Functions
 
 - Home screen with link to songbook pdf.
